@@ -14,7 +14,7 @@ export const navigationItems = [
   },
   {
     label: 'Reviews',
-    href: '#reviews',
+    href: 'reviews',
   },
   {
     label: 'Blog',

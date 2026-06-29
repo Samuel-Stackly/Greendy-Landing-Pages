@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
 
 function DesktopNav({ items }) {
   return (
@@ -29,7 +31,8 @@ function DesktopNav({ items }) {
               href={item.href}
               className="group relative flex items-center gap-1 text-[16px] font-medium leading-none text-foreground transition-colors duration-250 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <span>{item.label}</span>
+              
+              <Link to={item.href}>{item.label}</Link>
               {item.items ? <ChevronDown size={14} strokeWidth={1.7} className="transition-transform duration-250 group-hover:rotate-180" /> : null}
               <span className="absolute inset-x-0 -bottom-[6px] h-[1px] origin-center scale-x-0 bg-primary transition-transform duration-250 group-hover:scale-x-100" />
             </a>
